@@ -1,8 +1,42 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `WB 2020 Static`,
+    description: `Wieser Brothers General Contracting | Design/Build, Project management, General Construction.`,
     author: `@gatsbyjs`,
+    menuLinks: [
+      {
+        name: 'Home',
+        link: '/'
+      },
+      {
+        name: 'Our Firm',
+        link: '/our-firm'
+      },
+      {
+        name: 'Our Services',
+        link: '/our-firm'
+      },
+      {
+        name: 'Our Commitment',
+        link: '/our-commitment'
+      },
+      {
+        name: 'Projects',
+        link: '/projects'
+      },
+      {
+        name: 'News & Events',
+        link: '/news-events'
+      },
+      {
+        name: 'Employee Login',
+        link: '/employee-login'
+      },
+      {
+        name: 'Plan Room',
+        link: '/plan-room'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
