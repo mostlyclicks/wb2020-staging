@@ -1,10 +1,11 @@
 import { Link } from "gatsby"
+import styled from 'styled-components'
+
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header className="container"
-  >
+const Header = ({ siteTitle, menuLinks }) => (
+  <header className="container">
     <div className="navbar">
       <h1 style={{ margin: 0 }}>
         <Link
@@ -12,7 +13,14 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
+        
       </h1>
+      <ul>
+        {console.log(menuLinks)}
+        {menuLinks.map((link, i) => (
+          <li key={i}><Link to={link.link}>{link.name}</Link></li>
+        ))}
+      </ul>
     </div>
   </header>
 )
@@ -26,3 +34,5 @@ Header.defaultProps = {
 }
 
 export default Header
+
+
