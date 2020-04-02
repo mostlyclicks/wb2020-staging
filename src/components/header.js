@@ -14,6 +14,10 @@ import { device } from "./media-queries"
 
 const Header = ({ siteTitle, menuLinks }) => (
   <HeaderWrapper>
+    <StyledMobileNav>
+      <h1>MobileNav</h1>
+    </StyledMobileNav>
+    
     <StyledHeader>
       <h1>
         <Link to="/">
@@ -26,7 +30,9 @@ const Header = ({ siteTitle, menuLinks }) => (
           <li key={i}><Link to={link.link}>{link.name}</Link></li>
         ))}
       </ul>
+      
     </StyledHeader>
+    
   </HeaderWrapper>
 )
 
@@ -47,10 +53,9 @@ const HeaderWrapper = styled.section`
   width:100%;
   margin:0 auto;
   border:1px dotted black;
-    @media ${device.mobileM} {
+  @media ${device.mobileM} {
     max-width: 768px;
-    background-color: yellow;
-   
+    background-color: blue;
   }
   @media ${device.tablet} {
     max-width: 978px;
@@ -62,6 +67,18 @@ const HeaderWrapper = styled.section`
     background-color: green;
     max-width: 1200px;
   }
+`
+
+const StyledMobileNav = styled.div`
+  display:flex;
+  background-color:light-green;
+  margin-top:50px;
+
+  @media ${device.tablet} {
+    max-width: 978px;
+    display:none;
+  }
+
 `
 
 const StyledHeader = styled.header`
@@ -90,6 +107,18 @@ const StyledHeader = styled.header`
 
       }
     }
+  }
+
+  @media ${device.mobileM} {
+    max-width: 768px;
+    display:none;
+  }
+
+  @media ${device.tablet} {
+    max-width: 978px;
+    font-size:14px;
+    display:block;
+
   }
  
 
