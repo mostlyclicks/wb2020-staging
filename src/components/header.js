@@ -15,13 +15,14 @@ import { FaBars } from "react-icons/fa"
 
 const Header = ({ siteTitle, menuLinks }) => (
   <HeaderWrapper>
+
     <StyledMobileNav>
       <h1>
         <Link to="/">
           {siteTitle}
         </Link>
       </h1>
-      <FaBars size="1.5em" />
+      <FaBars size="1.5em" className="hamburger"/>
     </StyledMobileNav>
     
     <StyledHeader>
@@ -36,9 +37,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           <li key={i}><Link to={link.link}>{link.name}</Link></li>
         ))}
       </ul>
-      
-    </StyledHeader>
-    
+    </StyledHeader> 
   </HeaderWrapper>
 )
 
@@ -80,6 +79,7 @@ const StyledMobileNav = styled.div`
   justify-content:space-between;
   align-items:center;
   background-color:light-green;
+  .hamburger {padding:0 20px;}
   
 
   @media ${device.tablet} {
