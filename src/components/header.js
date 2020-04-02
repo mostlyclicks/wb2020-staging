@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import PropTypes from "prop-types"
 import React from "react"
 import { device } from "./media-queries"
+import { FaBars } from "react-icons/fa"
 
 
 //TODO 
@@ -15,7 +16,12 @@ import { device } from "./media-queries"
 const Header = ({ siteTitle, menuLinks }) => (
   <HeaderWrapper>
     <StyledMobileNav>
-      <h1>MobileNav</h1>
+      <h1>
+        <Link to="/">
+          {siteTitle}
+        </Link>
+      </h1>
+      <FaBars size="1.5em" />
     </StyledMobileNav>
     
     <StyledHeader>
@@ -71,8 +77,10 @@ const HeaderWrapper = styled.section`
 
 const StyledMobileNav = styled.div`
   display:flex;
+  justify-content:space-between;
+  align-items:center;
   background-color:light-green;
-  margin-top:50px;
+  
 
   @media ${device.tablet} {
     max-width: 978px;
@@ -103,8 +111,6 @@ const StyledHeader = styled.header`
           background-color:rgba(0,0,0,.25);
           transition:.6s;
         }
-        
-
       }
     }
   }
@@ -117,7 +123,7 @@ const StyledHeader = styled.header`
   @media ${device.tablet} {
     max-width: 978px;
     font-size:14px;
-    display:block;
+    display:flex;
 
   }
  
