@@ -162,7 +162,7 @@ const StyledFooter = styled.footer`
     text-decoration: none;
 
     &:hover {
-      transition: 1s;
+      transition: .6s;
       background-color: rgba(0, 0, 0, 0.15);
     }
   }

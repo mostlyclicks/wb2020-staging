@@ -41,7 +41,7 @@ export default TopNav
 // STYLES ––––––––––––––––––––––––– //
 
 const StyledTopNav = styled.nav`
-margin-bottom:20px;
+
   background-color: #a4a4a4;
 
   ul {

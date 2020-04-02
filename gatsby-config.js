@@ -28,14 +28,14 @@ module.exports = {
         name: "News & Events",
         link: "/news-events",
       },
-      {
-        name: "Employee Login",
-        link: "/employee-login",
-      },
-      {
-        name: "Plan Room",
-        link: "/plan-room",
-      },
+      // {
+      //   name: "Employee Login",
+      //   link: "/employee-login",
+      // },
+      // {
+      //   name: "Plan Room",
+      //   link: "/plan-room",
+      // },
     ],
   },
   plugins: [
