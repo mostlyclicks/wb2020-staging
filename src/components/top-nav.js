@@ -42,7 +42,7 @@ export default TopNav
 
 const StyledTopNav = styled.nav`
 
-  background-color: #a4a4a4;
+  background-color:#3d3d3d;
 
   ul {
     display: flex;
@@ -60,6 +60,7 @@ const StyledTopNav = styled.nav`
     }
   }
   a {
+    color:#ffffff;
     text-decoration:none;
     padding: 10px 4px;
     display: flex;
@@ -81,7 +82,7 @@ const StyledTopNav = styled.nav`
     }
 
     a {
-      padding: 6px 0.8rem;
+      padding: 8px 0.8rem;
     }
   }
 `

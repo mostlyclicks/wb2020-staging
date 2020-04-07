@@ -14,6 +14,20 @@ import { device } from "./media-queries"
 //3. media queries
 //4. Onclick to show mobile nav
 
+  // @media ${device.mobileM} {
+  //   max-width: 768px;
+
+  // }
+  // @media ${device.tablet} {
+  //   max-width: 978px;
+
+  //   font-size:14px;
+  // }
+  // @media ${device.desktop} {
+
+  //   max-width: 1200px;
+  // }
+
 
 
 const Header = ({ siteTitle, menuLinks }) => (
@@ -37,19 +51,8 @@ export default Header
 
 const HeaderWrapper = styled.section`
   width:100%;
+  background-color:#00573c;
   margin:0 auto;
-  border:1px dotted black;
-  @media ${device.mobileM} {
-    max-width: 768px;
-    background-color: blue;
-  }
-  @media ${device.tablet} {
-    max-width: 978px;
-    background-color: #cdcdcd;
-    font-size:14px;
-  }
-  @media ${device.desktop} {
-    background-color: green;
-    max-width: 1200px;
-  }
+  
+
 `

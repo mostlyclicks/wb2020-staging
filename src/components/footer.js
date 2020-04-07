@@ -10,91 +10,95 @@ import { device } from "./media-queries"
 
 const Footer = () => {
   return (
-    <FooterWrapper>
-      <StyledFooter>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/our-firm">Our Firm</Link>
-            </li>
-            <li>
-              <Link to="/our-services">Our Services</Link>
-            </li>
-            <li>
-              <Link to="/our-commitment">Our Commitment</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/news-events">News & Events</Link>
-            </li>
-          </ul>
-        </div>
+    <FooterSection>
+      <FooterWrapper>
+        <StyledFooter>
+          <div>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/our-firm">Our Firm</Link>
+              </li>
+              <li>
+                <Link to="/our-services">Our Services</Link>
+              </li>
+              <li>
+                <Link to="/our-commitment">Our Commitment</Link>
+              </li>
+              <li>
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li>
+                <Link to="/news-events">News & Events</Link>
+              </li>
+            </ul>
+          </div>
 
-        <div>
-          <ul>
-            <li>
-              <Link to="/contact-us">Contact Us</Link>
-            </li>
-            <li>
-              <Link to="/#employment-opportunities">
-                Employment Opportunities
-              </Link>
-            </li>
-            <li>
-              <Link to="/#submit-bids">Submit Bids</Link>
-            </li>
-            <li>
-              <Link to="/#info">Info</Link>
-            </li>
-            <li>
-              <Link to="/#msds">MSDS</Link>
-            </li>
-          </ul>
-        </div>
+          <div>
+            <ul>
+              <li>
+                <Link to="/contact-us">Contact Us</Link>
+              </li>
+              <li>
+                <Link to="/#employment-opportunities">
+                  Employment Opportunities
+                </Link>
+              </li>
+              <li>
+                <Link to="/#submit-bids">Submit Bids</Link>
+              </li>
+              <li>
+                <Link to="/#info">Info</Link>
+              </li>
+              <li>
+                <Link to="/#msds">MSDS</Link>
+              </li>
+            </ul>
+          </div>
 
-        <div>
-          <p>
-            200 Twilite Street
-            <br />
-            La Crescent, MN 55947
-            <br />
-            507.895.8903
-            <br />
-            Fax: 507.895.8438
-            <br />
-            <a href="mailto:info@wieserbrothers.com">info@wieserbrothers.com</a>
-          </p>
+          <div>
+            <p>
+              200 Twilite Street
+              <br />
+              La Crescent, MN 55947
+              <br />
+              507.895.8903
+              <br />
+              Fax: 507.895.8438
+              <br />
+              <a href="mailto:info@wieserbrothers.com">
+                info@wieserbrothers.com
+              </a>
+            </p>
 
-          <ul className="social-nav">
-            <li>
-              <a href="#">
-                <FaFacebook />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FaLinkedin />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FaYoutube />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FaInstagram />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </StyledFooter>
-    </FooterWrapper>
+            <ul className="social-nav">
+              <li>
+                <a href="#">
+                  <FaFacebook />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <FaLinkedin />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <FaYoutube />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <FaInstagram />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </StyledFooter>
+      </FooterWrapper>
+    </FooterSection>
   )
 }
 
@@ -105,13 +109,22 @@ export default Footer
 
 // STYLES ––––––––––––––––––––––––– //
 
+const FooterSection = styled.section`
+  background-color: #00573c;
+`
+
 const FooterWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
+  color:#ffffff;
+  
+  a {
+    color:#ffffff;
+  }
 
   @media ${device.mobileM} {
     max-width: 768px;
-    background-color: yellow;
+    
     li {
       padding: 0.2rem 0;
       font-size: 110%;
@@ -119,22 +132,21 @@ const FooterWrapper = styled.div`
   }
   @media ${device.tablet} {
     max-width: 978px;
-    background-color: #cdcdcd;
-    font-size:14px;
+    
+    font-size: 14px;
     li {
       padding: 0 0;
       font-size: 95%;
     }
   }
   @media ${device.desktop} {
-    background-color: green;
+    
     max-width: 1200px;
   }
 `
 
 const StyledFooter = styled.footer`
   min-height: 50px;
-  border: 1px solid blue;
   padding: 20px;
   display: flex;
   flex-direction: row;
