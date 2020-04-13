@@ -17,7 +17,6 @@ const HomeGrid = () => {
         <GridItem>box 2</GridItem>
         <GridItem>box 3</GridItem>
         <GridItem>box 4</GridItem>
-        <GridItem>box 5</GridItem>
       </GridContainer>
     </GridSection>
   )
@@ -27,6 +26,9 @@ export default HomeGrid
 
 
 const GridSection = styled.section`
+  padding-top:40px;
+  padding-bottom:40px;
+  border:1px solid red;
   
   width: 100%;
   background-size:100%;
@@ -37,16 +39,28 @@ const GridSection = styled.section`
 const GridContainer = styled.section`
   display: grid;
   grid-gap: 20px;
-  @media ${device.laptop} {
+  @media ${device.tablet} {
+    grid-template-columns:1fr 1fr;
     max-width:768px;
+    margin:0 auto;
+  }
+
+  @media ${device.laptop} {
+
   }
 `
 const GridItem = styled.div`
   height: 400px;
   background-color: #cdcdcd;
-  :nth-child(1) {
-    
+
+  @media ${device.tablet} {
+    max-width:400px;
   }
+
+
+  // :nth-child(1) {
+    
+  // }
   
 `
 

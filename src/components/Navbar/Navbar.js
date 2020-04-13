@@ -47,9 +47,9 @@ import { device } from "../media-queries"
 
 
   const Navigation = styled.nav`
-  height:8vh;
+  height:80px;
   display:flex;
-  background-color: transparent;
+  background-color: rgba(0,87,60,.8);//#00573c
   position:relative;
   justify-content:space-between;
   text-transform:uppercase;
