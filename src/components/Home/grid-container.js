@@ -13,10 +13,27 @@ const HomeGrid = () => {
   return (
     <GridSection>
       <GridContainer>
-        <GridItem>box 1</GridItem>
-        <GridItem>box 2</GridItem>
-        <GridItem>box 3</GridItem>
-        <GridItem>box 4</GridItem>
+        <GridItem></GridItem>
+        <GridItem>
+          <GridBox>
+            <h1>
+              Trust
+              <br />
+              Partnership
+              <br />
+              Excellence
+            </h1>
+            <Link to="/">Learn more</Link>
+          </GridBox>
+        </GridItem>
+        <GridItem>
+        <GridBox>
+          <h1>News</h1>
+          <p>New ABC Company Expansions</p>
+          <Link to="/">Read more</Link>
+        </GridBox></GridItem>
+        
+        <GridItem></GridItem>
       </GridContainer>
     </GridSection>
   )
@@ -27,9 +44,7 @@ export default HomeGrid
 
 const GridSection = styled.section`
   padding-top:40px;
-  padding-bottom:40px;
-  border:1px solid red;
-  
+  padding-bottom:40px;  
   width: 100%;
   background-size:100%;
   background-repeat:no-repeat;
@@ -49,20 +64,20 @@ const GridContainer = styled.section`
 
   }
 `
-const GridItem = styled.div`
-  height: 400px;
-  background-color: #cdcdcd;
+// const GridItem = styled.div`
+//   height: 400px;
+//   background-color: #cdcdcd;
 
-  @media ${device.tablet} {
-    max-width:400px;
-  }
+//   @media ${device.tablet} {
+//     max-width:400px;
+//   }
 
 
-  // :nth-child(1) {
+//   // :nth-child(1) {
     
-  // }
+//   // }
   
-`
+// `
 
 
 
@@ -80,67 +95,67 @@ const GridContainerWrapper = styled.div`
     grid-gap:20px;
   }
 `
-// const GridItem = styled.div`
-//   background-color: rgba(0, 0, 0, 0.25);
-//   height: 400px;
-//   display: block;
-//   padding: 20px;
-//   background-color: rgba(255, 255, 255, 1);
-//   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
-//   color: var(--orange);
-//   :nth-child(1) {
-//     grid-row: 1 / span 2;
-//     order: 1;
-//     background-image: url(${block1});
-//     background-size:cover;
-//   }
-//   :nth-child(2) {
-//     order: 2;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: var(--darkGray);
-//   }
-//   :nth-child(3) {
-//     order: 4;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: var(--darkGray);
-//   }
-//   :nth-child(4) {
-//     order: 3;
-//     background-image: url(${block2});
-//   }
-//   :nth-child(5) {
-//     order: 5;
-//     background-image: url(${block3});
-//   }
-//   :nth-child(6) {
-//     order: 6;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: var(--darkGray);
-//   }
+const GridItem = styled.div`
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 400px;
+  display: block;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+  color: var(--orange);
+  :nth-child(1) {
+    grid-row: 1 / span 2;
+    order: 1;
+    background-image: url(${block2});
+    background-size:cover;
+  }
+  :nth-child(2) {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkGray);
+  }
+  :nth-child(3) {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkGray);
+  }
+  :nth-child(4) {
+    order: 3;
+    background-image: url(${block2});
+  }
+  :nth-child(5) {
+    order: 5;
+    background-image: url(${block3});
+  }
+  :nth-child(6) {
+    order: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkGray);
+  }
 
-//   @media ${device.tablet} {
-//     height: 300px;
-//     :nth-child(1) {order: 1;}
-//     :nth-child(2) {order: 2;}
-//     :nth-child(3) {order: 3;}
-//     :nth-child(4) {order: 4;}
-//     :nth-child(5) {order: 5;}
-//     :nth-child(6) {order: 6;}
-//   }
+  @media ${device.tablet} {
+    height: 300px;
+    :nth-child(1) {order: 1;}
+    :nth-child(2) {order: 2;}
+    :nth-child(3) {order: 3;}
+    :nth-child(4) {order: 4;}
+    :nth-child(5) {order: 5;}
+    :nth-child(6) {order: 6;}
+  }
 
-//   @media ${device.laptop} {
-//     height:400px;
-//   }
-//`
+  @media ${device.laptop} {
+    height:400px;
+  }
+`
 const GridBox = styled.div`
   width: 250px;
   height: 250px;

@@ -94,7 +94,7 @@ module.exports = {
           },
           {
             family: `IBM Plex Serif`,
-            variants: [`400`, "700"],
+            variants: [`400`, `700`],
           },
         ],
       },

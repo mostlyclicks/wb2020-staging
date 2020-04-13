@@ -47,6 +47,8 @@ import { device } from "../media-queries"
 
 
   const Navigation = styled.nav`
+  font-family:'Open Sans';
+  font-weight:normal;
   height:80px;
   display:flex;
   background-color: rgba(0,87,60,.8);//#00573c
@@ -61,14 +63,7 @@ import { device } from "../media-queries"
   a {color:#fff;}
   
 
-  // @media (max-width: 768px) {
-  //   position: sticky;
-  //   height: 8vh;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   left: 0;
-  // }
+
 
   @media ${device.mobileM} {
     max-width: 768px;

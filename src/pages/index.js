@@ -14,19 +14,11 @@ const IndexPage = () => (
     <SEO title="Home" />
     <HeroSection />
     <MainSection>
-{/*
-      <h1 style={{ marginTop: `0px` }}>Home Page</h1>
-      <p>Home page content</p>
-*/}
 
       <WeiserBrothersSection>
         <img src={block1} alt="Wieser Brothers" />
         <p>Wieser Brothers General Contractor, Inc. is a family-owned and operated firm based in La Crescent, MN. Founded in 1994 by Jeff and Brian Wieser, the company has grown into a full-service, integrated 130 plus person team that includes journeyman carpenters, certified concrete finishers, trained steel erectors, skilled field superintendents and professional project managers, all dedicated to delivering quality construction services.</p>
-        
       </WeiserBrothersSection>
-
-      
-      
       <HomeGrid />
     </MainSection>
   </Layout>
@@ -48,8 +40,6 @@ background: -moz-radial-gradient(center, ellipse cover,  #00573c 0%, #003813 100
 background: -webkit-radial-gradient(center, ellipse cover,  #00573c 0%,#003813 100%); /* Chrome10-25,Safari5.1-6 */
 background: radial-gradient(ellipse at center,  #00573c 0%,#003813 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00573c', endColorstr='#003813',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-
   height: 100%;
 `
 const WeiserBrothersSection = styled.section`
@@ -67,8 +57,9 @@ const WeiserBrothersSection = styled.section`
   p {
     padding:0 20px;
     line-height:1.55rem;
+    font-family:'Open Sans';
+    font-weight:400;
   }
-  
   
   @media ${device.tablet} {
     width:55%;
