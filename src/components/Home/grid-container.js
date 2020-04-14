@@ -131,7 +131,7 @@ const GridItem = styled.div`
   }
   :nth-child(4) {
     order: 3;
-    background-image: url(${block2});
+    background-image: url(${block3});
   }
   // :nth-child(5) {
   //   order: 5;

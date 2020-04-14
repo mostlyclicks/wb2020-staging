@@ -24,6 +24,13 @@ body {
   flex:1 0 auto;
   
 }
+
+:root {
+  --mainNavLinks:#ffffff;
+  --wbGreenDark:#00573c;
+  --orange:#fe9314;
+  --darkGray:rgba(0, 0, 0, .8);;
+}
 /* 
 article,
 aside,
