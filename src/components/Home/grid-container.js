@@ -14,6 +14,7 @@ const HomeGrid = () => {
     <GridSection>
       <GridContainer>
         <GridItem></GridItem>
+        
         <GridItem>
           <GridBox>
             <h1>
@@ -26,14 +27,17 @@ const HomeGrid = () => {
             <Link to="/">Learn more</Link>
           </GridBox>
         </GridItem>
+
         <GridItem>
-        <GridBox>
-          <h1>News</h1>
-          <p>New ABC Company Expansions</p>
-          <Link to="/">Read more</Link>
-        </GridBox></GridItem>
+          <GridBox>
+            <h1>News</h1>
+            <p>New ABC Company Expansions</p>
+            <Link to="/">Read more</Link>
+          </GridBox>
+        </GridItem>
         
         <GridItem></GridItem>
+
       </GridContainer>
     </GridSection>
   )
@@ -104,7 +108,7 @@ const GridItem = styled.div`
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
   color: var(--orange);
   :nth-child(1) {
-    grid-row: 1 / span 2;
+    
     order: 1;
     background-image: url(${block2});
     background-size:cover;
@@ -129,17 +133,17 @@ const GridItem = styled.div`
     order: 3;
     background-image: url(${block2});
   }
-  :nth-child(5) {
-    order: 5;
-    background-image: url(${block3});
-  }
-  :nth-child(6) {
-    order: 6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--darkGray);
+  // :nth-child(5) {
+  //   order: 5;
+  //   background-image: url(${block3});
+  // }
+  // :nth-child(6) {
+  //   order: 6;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //   background-color: var(--darkGray);
   }
 
   @media ${device.tablet} {
@@ -148,8 +152,8 @@ const GridItem = styled.div`
     :nth-child(2) {order: 2;}
     :nth-child(3) {order: 3;}
     :nth-child(4) {order: 4;}
-    :nth-child(5) {order: 5;}
-    :nth-child(6) {order: 6;}
+    // :nth-child(5) {order: 5;}
+    // :nth-child(6) {order: 6;}
   }
 
   @media ${device.laptop} {
