@@ -61,17 +61,32 @@ const MissionWrapper = styled.div`
     max-width:768px;
     align-items:center;
   }
+  @media ${device.laptop} {
+    max-width:960px;
+  }
+  @media ${device.laptopL} {
+    max-width:1200px;
+  }
 `
 
 const TextBoxWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow:5px 5px 15px rgba(0,0,0,.6);
-  max-width:400px;
+  max-width:100%;
   padding:20px 40px;
   div:nth-last-child(1) {
     margin-top: 1rem;
     border-top: 5px solid #fff;
     padding-top: 1.65rem;
+  }
+   @media ${device.tablet} {
+    max-width: 293px;
+  }
+  @media ${device.laptop} {
+    max-width: 390px;
+  }
+  @media ${device.laptopL} {
+    max-width: 510px;
   }
 `
 
@@ -94,7 +109,5 @@ const TextBox = styled.div`
     font-size:1rem;
     line-height:1.5em;
   }
-  @media ${device.tablet} {
-    max-width: 293px;
-  }
+ 
 `

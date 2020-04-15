@@ -57,6 +57,14 @@ const GridContainer = styled.section`
     max-width:768px;
     margin:0 auto;
   }
+  @media ${device.laptop} {
+    grid-template-columns:1fr 1fr;
+    max-width:960px;
+  }
+  @media ${device.laptopL} {
+    grid-template-columns:1fr 1fr;
+    max-width:1200px;
+  }
 `
 
 const GridContainerWrapper = styled.div`
