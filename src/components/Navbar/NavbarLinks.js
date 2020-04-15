@@ -8,12 +8,12 @@ import styled from "styled-components"
 
 const NavbarLinks = ({ menuLinks }) => (
   <>
-    <ul>
+    
       {console.log(menuLinks)}
       {menuLinks.map((link, i) => (
         <NavItem to={link.link}>{link.name}</NavItem>
       ))}
-    </ul>
+    
   </>
 )
 

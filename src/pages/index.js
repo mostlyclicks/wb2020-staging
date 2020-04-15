@@ -47,6 +47,7 @@ const WeiserBrothersSection = styled.section`
   color:#bcbcbc;
   display:flex;
   flex-direction:column;
+  align-items:center;
   padding-top:40px;
   padding-bottom:40px;
   margin-bottom:0px;
@@ -65,6 +66,7 @@ const WeiserBrothersSection = styled.section`
   @media ${device.tablet} {
     width:55%;
     margin:80px auto;
+    height:550px;
   }
   @media ${device.laptop} {
     width:670px;
