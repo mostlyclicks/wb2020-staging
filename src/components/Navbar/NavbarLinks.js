@@ -1,19 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-// import { device } from "../media-queries"
+import { device } from "../media-queries"
 
 
 
 
 const NavbarLinks = ({ menuLinks }) => (
   <>
-    
       {console.log(menuLinks)}
       {menuLinks.map((link, i) => (
         <NavItem to={link.link}>{link.name}</NavItem>
       ))}
-    
   </>
 )
 
@@ -22,6 +20,8 @@ export default NavbarLinks
 
 
 const NavItem = styled(Link)`
+ font-family:'Open Sans';
+  font-weight:400;       
  text-decoration: none;
  color:#111;
  display:inline-block;
@@ -44,7 +44,7 @@ const NavItem = styled(Link)`
  }
 
  :hover {
-   color:goldenrod;
+   color:var(--orange);
    ::after {
      width:100%;
    }

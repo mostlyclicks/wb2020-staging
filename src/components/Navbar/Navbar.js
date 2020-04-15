@@ -31,7 +31,6 @@ import { device } from "../media-queries"
 
         {navbarOpen ? (
           <Navbox>
-            
             <NavbarLinks menuLinks={menuLinks} />
           </Navbox>
         ) : (
@@ -45,10 +44,9 @@ import { device } from "../media-queries"
 
   export default Navbar
 
-
   const Navigation = styled.nav`
   font-family:'Open Sans';
-  font-weight:normal;
+  font-weight:400;
   height:80px;
   display:flex;
   background-color: rgba(0,87,60,.8);//#00573c
@@ -106,9 +104,20 @@ import { device } from "../media-queries"
     padding-top:2vh;
     background-color:#fff;
     transition: all 0.3s ease-in;
-    top:13vh;
+    top:120px;
     left: ${props => (props.open ? "-100%" : "0")};
-    a {color:#00573c;text-decoration:underline;}
+    :nth-child(last) {
+      border-bottom:none;
+    }
+    a {
+      color:#00573c;
+      text-decoration:none;
+      width:80%;
+      border-bottom:1px solid #cdcdcd;
+      padding:1rem 20px;
+      
+    }
+
   }
 `
   const Hamburger = styled.div`
