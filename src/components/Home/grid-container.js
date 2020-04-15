@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import { device } from "../media-queries"
-import block1 from '../../images/1JeffBrian2017.jpeg'
+import gridBackground from '../../images/hero_8918_background.jpg'
 import block2 from "../../images/IMG_2273_employment_page-web.jpeg"
 import block3 from "../../images/IMG_4870_MOD-2_w.jpeg"
 
@@ -47,17 +47,21 @@ export default HomeGrid
 
 
 const GridSection = styled.section`
+  
   padding-top:40px;
   padding-bottom:40px;  
   width: 100%;
-  background-size:100%;
+  background-image:url(${gridBackground});
+  background-position-y:50%;
+  background-size:contain;
   background-repeat:no-repeat;
-  background-color:#ededed;
+  background-color:#ffffff;
   
 `
 const GridContainer = styled.section`
   display: grid;
   grid-gap: 20px;
+ 
   @media ${device.tablet} {
     grid-template-columns:1fr 1fr;
     max-width:768px;
@@ -68,22 +72,6 @@ const GridContainer = styled.section`
 
   }
 `
-// const GridItem = styled.div`
-//   height: 400px;
-//   background-color: #cdcdcd;
-
-//   @media ${device.tablet} {
-//     max-width:400px;
-//   }
-
-
-//   // :nth-child(1) {
-    
-//   // }
-  
-// `
-
-
 
 const GridContainerWrapper = styled.div`
   display: grid;

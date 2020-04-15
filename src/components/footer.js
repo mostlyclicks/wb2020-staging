@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import { Link } from 'gatsby'
-
+import Mission from './mission'
 import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa"
 import { device } from "./media-queries"
 
@@ -10,7 +10,9 @@ import { device } from "./media-queries"
 
 const Footer = () => {
   return (
+    
     <FooterSection>
+      <Mission />
       <FooterWrapper>
         <StyledFooter>
           <div>
