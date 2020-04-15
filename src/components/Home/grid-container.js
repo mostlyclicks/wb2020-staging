@@ -7,14 +7,11 @@ import gridBackground from '../../images/hero_8918_background.jpg'
 import block2 from "../../images/IMG_2273_employment_page-web.jpeg"
 import block3 from "../../images/IMG_4870_MOD-2_w.jpeg"
 
-
-
 const HomeGrid = () => {
   return (
     <GridSection>
       <GridContainer>
         <GridItem></GridItem>
-        
         <GridItem>
           <GridBox>
             <h1>
@@ -27,7 +24,6 @@ const HomeGrid = () => {
             <Link to="/">Learn more</Link>
           </GridBox>
         </GridItem>
-
         <GridItem>
           <GridBox>
             <h1>News</h1>
@@ -35,9 +31,7 @@ const HomeGrid = () => {
             <Link to="/">Read more</Link>
           </GridBox>
         </GridItem>
-        
         <GridItem></GridItem>
-
       </GridContainer>
     </GridSection>
   )
@@ -45,31 +39,23 @@ const HomeGrid = () => {
 
 export default HomeGrid
 
-
 const GridSection = styled.section`
-  
   padding-top:40px;
   padding-bottom:40px;  
   width: 100%;
   background-image:url(${gridBackground});
   background-position-y:50%;
-  background-size:contain;
+  background-size:100%;
   background-repeat:no-repeat;
   background-color:#ffffff;
-  
 `
 const GridContainer = styled.section`
   display: grid;
   grid-gap: 20px;
- 
   @media ${device.tablet} {
     grid-template-columns:1fr 1fr;
     max-width:768px;
     margin:0 auto;
-  }
-
-  @media ${device.laptop} {
-
   }
 `
 
@@ -79,7 +65,6 @@ const GridContainerWrapper = styled.div`
   grid-gap: 0px;
   margin: 50px auto;
   padding: 20px;
-
   @media ${device.tablet} {
     grid-template-columns:1fr 1fr; 
     max-width:991px;
@@ -96,7 +81,6 @@ const GridItem = styled.div`
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
   color: var(--orange);
   :nth-child(1) {
-    
     order: 1;
     background-image: url(${block2});
     background-size:cover;
@@ -121,29 +105,13 @@ const GridItem = styled.div`
     order: 3;
     background-image: url(${block3});
   }
-  // :nth-child(5) {
-  //   order: 5;
-  //   background-image: url(${block3});
-  // }
-  // :nth-child(6) {
-  //   order: 6;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   justify-content: center;
-  //   background-color: var(--darkGray);
-  }
-
   @media ${device.tablet} {
     height: 300px;
     :nth-child(1) {order: 1;}
     :nth-child(2) {order: 2;}
     :nth-child(3) {order: 3;}
     :nth-child(4) {order: 4;}
-    // :nth-child(5) {order: 5;}
-    // :nth-child(6) {order: 6;}
   }
-
   @media ${device.laptop} {
     height:400px;
   }
