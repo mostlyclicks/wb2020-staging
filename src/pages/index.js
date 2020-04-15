@@ -49,6 +49,7 @@ const WeiserBrothersSection = styled.section`
   flex-direction:column;
   padding-top:40px;
   padding-bottom:40px;
+  margin-bottom:0px;
   img {
     width:90%;
     margin:0 auto;

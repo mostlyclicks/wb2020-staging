@@ -40,19 +40,25 @@ const HomeGrid = () => {
 export default HomeGrid
 
 const GridSection = styled.section`
-  padding-top:40px;
-  padding-bottom:40px;  
+  
+  padding-top:0px;
+  padding-bottom:0px;  
   width: 100%;
   background-image:url(${gridBackground});
   background-position-y:50%;
   background-size:100%;
   background-repeat:no-repeat;
   background-color:#ffffff;
+  @media ${device.tablet} {
+    padding-top:40px;
+    padding-bottom:40px;
+  }
 `
 const GridContainer = styled.section`
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 0px;
   @media ${device.tablet} {
+    grid-gap:20px;
     grid-template-columns:1fr 1fr;
     max-width:768px;
     margin:0 auto;
