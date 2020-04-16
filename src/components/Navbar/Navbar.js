@@ -73,7 +73,6 @@ import { device } from "../media-queries"
     font-size:14px;
   }
   @media ${device.laptopL} {
-
     max-width: 1200px;
   }
 `
