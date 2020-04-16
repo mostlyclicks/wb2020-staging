@@ -112,16 +112,17 @@ export default Footer
 // STYLES ––––––––––––––––––––––––– //
 
 const FooterSection = styled.section`
-  background-color: #00573c;
+  background-color:var(--darkGray);
 `
 
 const FooterWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-  color:#ffffff;
+  color:rgba(255,255,255,.7);
   
   a {
-    color:#ffffff;
+    
+    color:rgba(255,255,255,.7);
   }
 
   @media ${device.mobileM} {
@@ -177,7 +178,8 @@ const StyledFooter = styled.footer`
 
     &:hover {
       transition: .6s;
-      background-color: rgba(0, 0, 0, 0.15);
+      background-color: var(--orange);
+      color:#fff;
     }
   }
 

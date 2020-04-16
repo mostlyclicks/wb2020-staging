@@ -63,16 +63,16 @@ import { device } from "../media-queries"
 
 
 
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
     max-width: 768px;
 
   }
-  @media ${device.tablet} {
-    max-width: 978px;
-
+  @media ${device.laptop} {
+    max-width: 960px;
+// border:1px solid yellow;
     font-size:14px;
   }
-  @media ${device.desktop} {
+  @media ${device.laptopL} {
 
     max-width: 1200px;
   }
@@ -89,14 +89,13 @@ import { device } from "../media-queries"
   }
 `
   const Navbox = styled.div`
+  
   display:flex;
   height:100%;
   justify-content:flex-end;
   align-items:center;
   
-
   @media (max-width: 768px) {
-    
     flex-direction:column;
     position:fixed;
     width:100%;
