@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import Layout from "./layout"
 import { device } from "./media-queries"
+import MainSubnav from "./Subnavs/main-subnav"
 
 const L2PagesLayout = (props) => (
 
@@ -13,11 +14,8 @@ const L2PagesLayout = (props) => (
         <h1>{ props.title }</h1>
           <div dangerouslySetInnerHTML={{ __html: props.content}} />
         </MainContent>
-        <L2Navigation>
-          <ul dangerouslySetInnerHTML={{ __html: props.sideNav }}>
-
-          </ul>
-        </L2Navigation>
+        
+        <MainSubnav subnav={props.subnav} />
       </Content>
     </ContentWrapper>
   </Layout>

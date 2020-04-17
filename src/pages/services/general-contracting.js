@@ -1,13 +1,17 @@
 import React from 'react'
-import Layout from '../../components/layout'
+import L2PagesLayout from "../../components/l2-page-template"
 
-const GeneralContracting = () => {
-  return (
-    <Layout>
-      <h1>General Contracting</h1>
-      <p>General Contracting copy</p>
-    </Layout>
-  )
-}
+const GeneralContracting = () => (
+  <>
+    <L2PagesLayout 
+      title={`General Contracting`}
+      subnav={`services`}
+      content={`
+      <p>Needs content</p>         
+    `}
+    
+    />
+  </>
+)
 
 export default GeneralContracting

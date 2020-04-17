@@ -1,11 +1,13 @@
 import React from 'react'
 import L2PagesLayout from "../../components/l2-page-template"
 
+
 const OurFirmIndex = () => (
   <>
     <L2PagesLayout 
-      title={`Our Firm`}
-      content={`
+      title = {`Our Firm`}
+      subnav = {`firm`}
+      content = {`
         <p>As a family-owned business, Wieser Brothers promotes these deeply-held values among our team.</p>
 
         <ul>
@@ -17,13 +19,7 @@ const OurFirmIndex = () => (
 
         <p>Wieser Brothers General Contractor, Inc. is a family-owned and operated firm based in La Crescent, MN.  Founded in 1994 by Jeff and Brian Wieser, the company has grown into a full-service, integrated 130 plus person team that includes journeyman carpenters, certified concrete finishers, trained steel erectors, skilled field superintendents and professional project managers, all dedicated to delivering quality construction services.  Wieser Brothers is the leader in design/build services, partnering closely with clients to meet current and future building needs with intelligence and efficiency.  TRUST is the cornerstone of any Wieser Brothers project.  Over 60% of annual sales are in repeat business from satisfied customers.</p>
       `}
-      sideNav={`
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-        <li>Link 4</li>
-        <li>Link 5</li>
-      `}
+      
     />
   </>
 )

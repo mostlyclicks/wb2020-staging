@@ -1,13 +1,19 @@
 import React from 'react'
-import Layout from '../../components/layout'
+import L2PagesLayout from '../../components/l2-page-template'
 
-const DesignBuild = () => {
-  return (
-    <Layout>
-      <h1>Design/Build</h1>
-      <p>Design/Build copy</p>
-    </Layout>
-  )
-}
+const DesignBuild = () => (
+  <>
+    <L2PagesLayout 
+      title = {`Design/Build`}
+      subnav = {`services`}
+      content = {`
+        <p>Wieser Brothers is an expert at partnering , and it shows throughout the design/build process. We listen closely to you, our client, so we can achieve the best outcome for your plans, your budget and your schedule.</p>
+
+        <p>This open approach support the sharing of ideas from a project's earliest stages, allowing us to more effectively manage time, cost and quality.</p>
+      `}
+    />
+
+  </>
+)
 
 export default DesignBuild

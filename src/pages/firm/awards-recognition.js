@@ -1,13 +1,14 @@
 import React from 'react'
-import Layout from '../../components/layout'
+import L2PagesLayout from "../../components/l2-page-template"
 
-const AwardsRecognition = () => {
-  return (
-    <Layout>
-      <h1>Awards Recognition</h1>
-      <p>Awards Recognition copy</p>
-    </Layout>
+const AwardsRecognition = () => (
+  <>
+    <L2PagesLayout
+      title={`Awards Recognition`}
+      subnav = {`firm`}
+      content = {`List of awards coming soon.`}
+    />
+  </>  
   )
-}
 
 export default AwardsRecognition
