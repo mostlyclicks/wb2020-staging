@@ -18,8 +18,8 @@ const Logo = () => {
     query {
       file(name: { eq: "wieser-brothers-logo-w" }, extension: { eq: "png" }) {
         childImageSharp {
-          fluid(maxWidth: 100, pngQuality: 80) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          fixed(width: 120, pngQuality: 80) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -27,7 +27,9 @@ const Logo = () => {
   `)
   return (
     <LogoWrap as={Link} to="/">
-      <Img fluid={data.file.childImageSharp.fluid} alt="logo" />
+      {/*<Img fluid={data.file.childImageSharp.fluid} alt="logo" />*/}
+      <Img fixed={data.file.childImageSharp.fixed} alt="logo" />
+
     </LogoWrap>
   )
 }
