@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
+import WBLogo from "../../images/wieser-brothers-logo-w.png"
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from "gatsby"
 
@@ -27,9 +28,9 @@ const Logo = () => {
   `)
   return (
     <LogoWrap as={Link} to="/">
-      {/*<Img fluid={data.file.childImageSharp.fluid} alt="logo image" />*/}
-      <Img fixed={data.file.childImageSharp.fixed} alt="logo" />
-
+      <img src={WBLogo} alt="Wieser Brothers Logo" width="130" />
+      {/*<Img fluid={data.file.childImageSharp.fluid} alt="logo image" />
+      <Img fixed={data.file.childImageSharp.fixed} alt="logo" />*/}
     </LogoWrap>
   )
 }
