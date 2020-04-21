@@ -59,9 +59,9 @@ module.exports = {
           type: 'Project',
           match: '/projects/:uid',
           path: '/project',
-          component: require.resolve('./src/templates/projects.js')
+          component: require.resolve('./src/templates/project.js')
 
-        }]
+        }],
         //accessToken:
            // optional
         // prismicRef: '...', // optional, default: master; useful for A/B experiments
@@ -75,10 +75,10 @@ module.exports = {
         //   sortBy: 'date_ASC', // optional, default: meta_lastPublicationDate_ASC; useful for pagination
         // }],
         // extraPageFields: 'article_type', // optional, extends pages query to pass extra fields
-        sharpKeys: [
-          /image|photo|picture/, // (default)
-          "profilepic",
-        ],
+        //sharpKeys: [
+          // /image|photo|picture/, // (default)
+         //"profilepic",
+       // ],
       },
     },
 
