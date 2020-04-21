@@ -18,7 +18,7 @@ const Logo = () => {
     query {
       file(name: { eq: "wieser-brothers-logo-w" }, extension: { eq: "png" }) {
         childImageSharp {
-          fixed(width: 120, pngQuality: 80) {
+          fixed(width: 120, pngQuality: 60) {
             ...GatsbyImageSharpFixed
           }
         }
