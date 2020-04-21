@@ -19,7 +19,7 @@ const Logo = () => {
       file(name: { eq: "wieser-brothers-logo-w" }, extension: { eq: "png" }) {
         childImageSharp {
           fixed(width: 120, pngQuality: 80) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_tracedSVG
           }
         }
       }
