@@ -49,6 +49,39 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+    {
+      resolve: "gatsby-source-prismic-graphql",
+      options: {
+        repositoryName: "wb2020", // required
+        defaultLang: "en-us", // optional, but recommended
+        pages: [{
+          type: 'Project',
+          match: '/projects/:uid',
+          path: '/project',
+          component: require.resolve('./src/templates/projects.js')
+
+        }]
+        //accessToken:
+           // optional
+        // prismicRef: '...', // optional, default: master; useful for A/B experiments
+        // path: '/preview', // optional, default: /preview
+        //previews: true, // optional, default: false
+        // pages: [{ // optional
+        //   type: 'Article', // TypeName from prismic
+        //   match: '/article/:uid', // pages will be generated under this pattern (optional)
+        //   path: '/article', // placeholder page for unpublished documents
+        //   component: require.resolve('./src/templates/article.js'),
+        //   sortBy: 'date_ASC', // optional, default: meta_lastPublicationDate_ASC; useful for pagination
+        // }],
+        // extraPageFields: 'article_type', // optional, extends pages query to pass extra fields
+        sharpKeys: [
+          /image|photo|picture/, // (default)
+          "profilepic",
+        ],
+      },
+    },
+
     {
       resolve: "gatsby-remark-embed-video",
       options: {
@@ -62,9 +95,9 @@ module.exports = {
             id: "youtube",
             embedURL: videoId =>
               `https://www.youtube-nocookie.com/embed/${videoId}`,
-          }
-        ] //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
-      }
+          },
+        ], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

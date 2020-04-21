@@ -9,6 +9,7 @@ import block1 from '../images/1JeffBrian2017.jpeg'
 import HeroBG from "../images/hero_8918-bg3.jpg"
 import { device } from "../components/media-queries"
 
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
