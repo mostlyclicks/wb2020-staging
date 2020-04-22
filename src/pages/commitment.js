@@ -3,7 +3,7 @@ import L2PagesLayout from "../components/l2-page-template"
 
 const OurCommitment = () => (
   <L2PagesLayout 
-      title = {`Our Firm`}
+      title = {`Our Commitment`}
       subnav = {`commitment`}
       content = {`
         <h3>Trust</h3>

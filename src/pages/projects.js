@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { RichText } from "prismic-reactjs"
+// import styled from "styled-components"
+import Layout from "../components/layout"
 
 
 const Projects = ( {data} ) => {
@@ -8,7 +10,7 @@ const Projects = ( {data} ) => {
   const projects = data.prismic.allProjects.edges
 
   return (
-    <div>
+    <Layout>
       <h1>Projects</h1>
       {projects.map(project => {
         return (
@@ -19,7 +21,7 @@ const Projects = ( {data} ) => {
           </h3>
         )
       })}
-    </div>
+    </Layout>
   )
 
 }

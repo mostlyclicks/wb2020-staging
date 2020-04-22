@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { RichText } from "prismic-reactjs"
+// import styled from "styled-components"
+import Layout from "../components/layout"
 
 export const query = graphql`
   query ProjectQuery($uid: String) {
@@ -26,9 +28,9 @@ const Project = ({ data }) => {
   const project = data.prismic.allProjects.edges
 
   return (
-    <div>
-      <h1>
-        Hello project:
+    <Layout>
+      <h1>Projects</h1>
+       
         {project.map(proj => {
           return (
             <>
@@ -37,8 +39,8 @@ const Project = ({ data }) => {
             </>
           )
         })}
-      </h1>
-    </div>
+      
+    </Layout>
   )
 }
 
