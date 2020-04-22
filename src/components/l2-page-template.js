@@ -3,19 +3,21 @@ import styled from "styled-components"
 import Layout from "./layout"
 import { device } from "./media-queries"
 import MainSubnav from "./Subnavs/main-subnav"
+import SideBarAddress from "./Subnavs/address-sidebar"
 
-const L2PagesLayout = (props) => (
-
+const L2PagesLayout = props => (
   <Layout>
     <ContentWrapper>
       <Content>
-
         <MainContent>
-        <h1>{ props.title }</h1>
-          <div dangerouslySetInnerHTML={{ __html: props.content}} />
+          <h1>{props.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: props.content }} />
         </MainContent>
-        
-        <MainSubnav subnav={props.subnav} />
+
+        <L2Navigation>
+          <MainSubnav subnav={props.subnav} />
+          <SideBarAddress />
+        </L2Navigation>
       </Content>
     </ContentWrapper>
   </Layout>
@@ -57,8 +59,35 @@ padding:1.5rem;
 
 `
 
-const MainContent = styled.main``
+const MainContent = styled.main`
+  
+`
 
 const L2Navigation = styled.aside`
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 52px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+    li:nth-last-child(1) {
+      border-bottom: none;
+    }
+
+    li {
+      border-bottom: 1px solid #ededed;
+      text-decoration: none;
+    }
+    li a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+    }
+  }
 `
+
+
 

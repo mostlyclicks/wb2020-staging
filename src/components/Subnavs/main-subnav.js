@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const MainSubnav = (props) => {
 
@@ -17,12 +18,24 @@ export default MainSubnav
 const FirmSubnav = () => (
   <>
     <ul>
-      <li>History</li>
-      <li>Safety</li>
-      <li>Sustainability</li>
-      <li>Professional Affiliation</li>
-      <li>Awards &amp; Recognition</li>
-      <li>Employment Opportunities</li>
+      <li>
+        <Link to="/firm/history">History</Link>
+      </li>
+      <li>
+        <Link to="/firm/safety">Safety</Link>
+      </li>
+      <li>
+        <Link to="/firm/sustainability">Sustainability</Link>
+      </li>
+      <li>
+        <Link to="/firm/professional-affiliations">Professional Affiliations</Link>
+      </li>
+      <li>
+        <Link to="/firm/awards-recognition">Awards &amp; Recognition</Link>
+      </li>
+      <li>
+        <Link to="/firm/employment-opportunities">Employment Opportunities</Link>
+      </li>
     </ul>
   </>
 )
@@ -30,9 +43,15 @@ const FirmSubnav = () => (
 const ServicesSubnav = () => (
   <>
     <ul>
-      <li>General Contracting</li>  
-      <li>Design/Build</li>
-      <li>Construction Management</li>
+      <li>
+        <Link to="/services/general-contracting">General Contracting</Link>
+      </li>
+      <li>
+        <Link to="/services/design-build">Design/Build</Link>
+      </li>
+      <li>
+        <Link to="/services/construction-management">Construction Management</Link>
+      </li>
     </ul>
   </>
 )
