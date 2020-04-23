@@ -9,6 +9,9 @@ const Projects = ( {data} ) => {
 
   const projects = data.prismic.allProjects.edges
 
+  
+
+
   return (
     <Layout>
       <h1>Projects</h1>
@@ -17,6 +20,7 @@ const Projects = ( {data} ) => {
           <h3>
             <Link to={`/projects/${project.node._meta.uid}`}>
               {RichText.asText(project.node.title)}
+              
             </Link>
           </h3>
         )
@@ -32,18 +36,19 @@ export default Projects
 // get list of all projects
 
 export const query = graphql`
-  {
-    prismic {
-      allProjects {
-        edges {
-          node {
-            title
-            _meta {
-              uid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+         {
+           prismic {
+             allProjects {
+               edges {
+                 node {
+                   title
+                   _meta {
+                     uid
+                   }
+                   
+                 }
+               }
+             }
+           }
+         }
+       `
