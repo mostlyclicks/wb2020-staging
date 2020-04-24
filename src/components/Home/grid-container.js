@@ -4,8 +4,9 @@ import { Link } from 'gatsby'
 
 import { device } from "../media-queries"
 import gridBackground from '../../images/hero_8918_background.jpg'
-import block2 from "../../images/IMG_2273_employment_page-web.jpeg"
-import block3 from "../../images/IMG_4870_MOD-2_w.jpeg"
+import block2 from "../../images/DJI_0317.jpg"
+import block3 from "../../images/JPEG-image-1.jpg"
+
 
 const HomeGrid = () => {
   return (
@@ -118,6 +119,7 @@ const GridItem = styled.div`
   :nth-child(4) {
     order: 3;
     background-image: url(${block3});
+    background-size:cover;
   }
   @media ${device.tablet} {
     height: 300px;

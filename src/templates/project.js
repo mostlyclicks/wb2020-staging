@@ -21,6 +21,19 @@ export const query = graphql`
                      ... on PRISMIC_ProjectBodyImage {
                        fields {
                          image
+                         imageSharp {
+                           internal {
+                             content
+                             description
+                             ignoreType
+                             mediaType
+                           }
+                           childImageSharp {
+                             fluid(quality: 80) {
+                               srcWebp
+                             }
+                           }
+                         }
                        }
                      }
                    }
@@ -57,7 +70,9 @@ const Project = ({ data }) => {
                   <p>{console.log(JSON.stringify(fields))}</p>
 
                   {fields.map(field => {
-                    return <img src={field.image.url} alt={field.image.alt} />
+                    return (
+                        <img src={field.imageSharp.childImageSharp.fluid.srcWebp} alt={field.image.alt} />
+                      )
                   })}
                   
 
