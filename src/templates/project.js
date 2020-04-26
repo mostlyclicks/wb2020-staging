@@ -16,6 +16,7 @@ export const query = graphql`
                    }
                    title
                    location
+                   long_description
                    body {
                      __typename
                      ... on PRISMIC_ProjectBodyImage {
@@ -62,7 +63,9 @@ const Project = ({ data }) => {
               <h1>{RichText.render(proj.node.title)}</h1>
               <p>{proj.node._meta.uid}</p>
               <p>{proj.node.location}</p>
-              <p>{proj.node.body.__typename}</p>
+              
+              <div>{RichText.render(proj.node.long_description)}</div>
+
               {proj.node.body.map(({ fields }) => {
                 return (
                   <>
@@ -71,11 +74,12 @@ const Project = ({ data }) => {
 
                   {fields.map(field => {
                     return (
+                      <div>
                         <img src={field.imageSharp.childImageSharp.fluid.srcWebp} alt={field.image.alt} />
+                      </div>
                       )
                   })}
                   
-
                   </>
 
                   

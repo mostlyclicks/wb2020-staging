@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import { device } from "../components/media-queries"
 
-
 const ContactUs = () => (
   <Layout>
     <StyledContactHeader>
@@ -98,8 +97,6 @@ const ContactUs = () => (
 )
 
 export default ContactUs
-
-
 
 const StyledContactHeader = styled.section`
   padding:2rem;
