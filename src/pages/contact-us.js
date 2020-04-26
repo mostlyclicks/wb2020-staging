@@ -99,12 +99,10 @@ const ContactUs = () => (
 
 export default ContactUs
 
-const StyledFormWrapper = styled.section`
 
-`
 
 const StyledContactHeader = styled.section`
-  
+  padding:2rem;
   margin:0px auto;
   @media ${device.tablet} {
     max-width: 768px;
@@ -117,14 +115,12 @@ const StyledContactHeader = styled.section`
   }
 `
 
-
 const StyledFormContainer = styled.div`
   display: flex;
   flex-direction: column;
-
+  padding-bottom:100px;
 
   form {
-    
     display: flex;
     width: 100%;
     ul {
@@ -195,4 +191,3 @@ const StyledFormContainer = styled.div`
     max-width: 1200px;
   }
 `
-
