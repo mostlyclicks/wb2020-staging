@@ -1,8 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { RichText } from "prismic-reactjs"
-// import styled from "styled-components"
+import styled from "styled-components"
 import Layout from "../components/layout"
+import { device } from "../components/media-queries"
 
 
 const Projects = ( {data} ) => {
@@ -14,6 +15,7 @@ const Projects = ( {data} ) => {
 
   return (
     <Layout>
+    <ProjectWrapper>
       <h1>Projects</h1>
       {projects.map(project => {
         return (
@@ -25,6 +27,7 @@ const Projects = ( {data} ) => {
           </h3>
         )
       })}
+      </ProjectWrapper>
     </Layout>
   )
 
@@ -52,3 +55,19 @@ export const query = graphql`
            }
          }
        `
+
+const ProjectWrapper = styled.section`
+  padding:20px;
+
+  @media ${device.tablet} {
+    padding:0px;
+    max-width:768px;
+    margin:0 auto;
+  }
+  @media ${device.laptop} {
+    max-width:960px;
+  }
+  @media ${device.laptopL} {
+    max-width:1200px;
+  }
+`

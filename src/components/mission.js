@@ -35,6 +35,7 @@ export default Mission;
 
 
 const MissionVisionSection = styled.section`
+  padding:20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
