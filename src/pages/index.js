@@ -16,10 +16,7 @@ const IndexPage = () => (
     <HeroSection />
     <MainSection>
 
-      <WeiserBrothersSection>
-        <img src={block1} alt="Wieser Brothers" />
-        <p>Wieser Brothers General Contractor, Inc. is a family-owned and operated firm based in La Crescent, MN. Founded in 1994 by Jeff and Brian Wieser, the company has grown into a full-service, integrated 130 plus person team that includes journeyman carpenters, certified concrete finishers, trained steel erectors, skilled field superintendents and professional project managers, all dedicated to delivering quality construction services.</p>
-      </WeiserBrothersSection>
+      
       <HomeGrid />
     </MainSection>
   </Layout>

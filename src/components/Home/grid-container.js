@@ -4,8 +4,9 @@ import { Link } from 'gatsby'
 
 import { device } from "../media-queries"
 import gridBackground from '../../images/hero_8918_background.jpg'
-import block2 from "../../images/DJI_0317.jpg"
+import block2 from "../../images/1JeffBrian2017.jpeg"
 import block3 from "../../images/JPEG-image-1.jpg"
+import block4 from "../../images/DJI_0317.jpg"
 
 
 const HomeGrid = () => {
@@ -33,6 +34,14 @@ const HomeGrid = () => {
           </GridBox>
         </GridItem>
         <GridItem></GridItem>
+        <GridItem></GridItem>
+        <GridItem>
+          <GridBox>
+            <h1>Employment Opportunities</h1>
+            <p>See all of our job opportunities</p>
+            <Link to="/">Start here</Link>
+          </GridBox>
+        </GridItem>
       </GridContainer>
     </GridSection>
   )
@@ -99,6 +108,8 @@ const GridItem = styled.div`
     order: 1;
     background-image: url(${block2});
     background-size:cover;
+    background-position-x:center;
+    background-repeat:no-repeat;
   }
   :nth-child(2) {
     order: 2;
@@ -121,15 +132,43 @@ const GridItem = styled.div`
     background-image: url(${block3});
     background-size:cover;
   }
+  :nth-child(5) {
+    order: 5;
+    background-image: url(${block4});
+    background-size:cover;
+  }
+
+
+  :nth-child(6) {
+    order: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkGray);
+  }
+
   @media ${device.tablet} {
     height: 300px;
-    :nth-child(1) {order: 1;}
+    :nth-child(1) {
+      order: 1;
+      background-position-x:-50px;
+    }
     :nth-child(2) {order: 2;}
     :nth-child(3) {order: 3;}
     :nth-child(4) {order: 4;}
+    :nth-child(5) {order: 5;}
+    :nth-child(6) {order: 6;}
   }
+
   @media ${device.laptop} {
     height:400px;
+    
+  }
+  @media ${device.laptopL} {
+    :nth-child(1) {
+      background-position-x:0;
+    }
   }
 `
 const GridBox = styled.div`
