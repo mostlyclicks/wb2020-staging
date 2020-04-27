@@ -1,11 +1,13 @@
 import React from 'react'
 import L2PagesLayout from "../../components/l2-page-template"
+import bgImage from "../../images/Sustainability.jpg"
 
 const Sustainability = () => (
   <>
     <L2PagesLayout 
       title= {`Sustainability`}
       subnav={`firm`}
+      backgroundImage = {bgImage}
       content = {`
         <p>Wieser Brothers is committed to environmentally responsible building, and proud to be a member of the U.S. Green Building Council. Our dedication to sustainability and green construction is visible in all aspects of our business, from our job site recycling practices to the solar panels installed on our office roof.</p>
 

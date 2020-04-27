@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import bgImg from "../images/istockphoto-812099500.jpg"
+import bgImg from "../images/Action-Field-Picture.jpg"
 import { device } from "./media-queries"
 
 
@@ -44,6 +44,8 @@ const MissionVisionSection = styled.section`
   background-image: 
     url(${bgImg});
   background-size: cover;
+  background-position-y:bottom;
+  background-repeat:no-repeat;
 
   @media ${device.table} {
     height:500px;

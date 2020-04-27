@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { RichText } from "prismic-reactjs"
 import styled from "styled-components"
 import Layout from "../components/layout"
+import { device } from "../components/media-queries"
 
 export const query = graphql`
          query ProjectQuery($uid: String) {
@@ -48,57 +49,55 @@ export const query = graphql`
 const Project = ({ data }) => {
   
   const project = data.prismic.allProjects.edges
+
+  
   
   return (
     <Layout>
       <h1>Projects</h1>
        <StyledProjectGrid>
         {project.map(proj => {
+
           return (
-            <>
-              <div id="project-title-location">
+            <MainDiv>
+              <div id="project-title-location" className="box">
                 <h1>{RichText.asText(proj.node.title)}</h1>
                 {/*proj.node._meta.uid*/}
                 <h3>{proj.node.location}</h3>
               </div>
 
-              <div id="project-description">
+              <div id="project-description" className="box">
                 {RichText.render(proj.node.long_description)}
               </div>
 
               {proj.node.body.map(({ fields }) => {
+
+                // const bgImg = {
+                //   backgroundImage: 'url(" + {field.imageSharp.childImageSharp.fluid.srcWebp + ")'
+                // }
+                
                 return (
                   <>
                     {fields.map((field, index) => {
                       return (
-                        <div id={index}>
-                          <img src={field.imageSharp.childImageSharp.fluid.srcWebp}  alt={field.image.alt}/>
+                        <div id={index} className="box"
+                          style={{ 
+                            backgroundImage: 'url(' + field.imageSharp.childImageSharp.fluid.srcWebp + ')'
+                          }}>
+                          {/*<img src={field.imageSharp.childImageSharp.fluid.srcWebp}  alt={field.image.alt}/>*/}
                         </div>
                         )
-                    })}
+                    })}            
+
                   </>
                 )
               })}
-            </>
+            </MainDiv>
           )
         })}
       </StyledProjectGrid>
 
-        <MainDiv>
-          <div id="1" className="box">
-            <h1>Project Title</h1>
-            <h3>Project location</h3>
-          </div>
-
-          <div id="2" className="box">
-            <p>I'm baby fashion axe disrupt lyft, freegan gastropub migas retro poutine man bun vape. Kinfolk pinterest yuccie, small batch biodiesel you probably haven't heard of them mumblecore asymmetrical shaman leggings cloud bread +1 XOXO dreamcatcher four loko. Unicorn selfies marfa seitan, williamsburg bushwick ethical schlitz affogato plaid vaporware. Shaman biodiesel blog, air plant portland polaroid tacos glossier helvetica slow-carb kogi farm-to-table asymmetrical truffaut pitchfork. Offal intelligentsia synth humblebrag migas flannel chambray poke lyft. Fanny pack wayfarers stumptown meh, chia vaporware tumblr four loko wolf hexagon tote bag try-hard kinfolk enamel pin fingerstache.</p>
-          </div>
-
-          <div id="3" className="box">Box 3</div>
-          <div id="4" className="box">box 4</div>
-          <div id="5" className="box">Box 5</div>
-          <div id="6" className="box">Box 6</div>
-        </MainDiv>
+       
 
 
     </Layout>
@@ -108,65 +107,96 @@ const Project = ({ data }) => {
 export default Project
 
 const MainDiv = styled.div`
-  display:grid;
-  border:1px solid blue;
-  padding:20px;
-  grid-template-columns:1fr 1fr 1fr;
-  grid-template-rows:2fr 1fr 2fr;
-  grid-gap:1rem;
-
+  display:inline-grid;
+  width:100%;
+  
+  margin:0 auto;
+  grid-gap:3px; 
+  
+  
+  div:nth-child(n+3) {
+    height:350px;
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+  
   .box {
-    
     padding:1rem;
   }
-  div:nth-child(1) {
-    grid-area:1 / 3 / 2 / 4;
-    background-color:#efefef;
-  }
-  div:nth-child(2) {
-    grid-area:2 / 1 / 3 / 3;
-  }
-  div:nth-child(3) {
-    background-color:blue;
-    grid-area:1 / 1 / 2 / 3;
-  }
-  div:nth-child(4) {
-    background-color:green;
-    grid-area:2 / 4 / 4 / 3;
-  }
-  div:nth-child(5) {
-    background-color:gray;
-    grid-area: 3 / 1 / 4 / 2;
+
+
+  @media ${device.tablet} {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:2fr 1fr 2fr 4fr;
+    grid-gap:1rem;
+      
+    div:nth-child(n+3) {
+      height:auto;
+    }
+
+    div:nth-child(1) {
+      grid-area:1 / 3 / 2 / 4;
+      background-color:#efefef;
+    }
+    div:nth-child(2) {
+      grid-area:2 / 1 / 3 / 2;
+    }
+    div:nth-child(3) {
+      grid-area:1 / 1 / 2 / 3;
+      background-size:cover;
+      background-position:center;
+    }
+    div:nth-child(4) {
+      background-color:green;
+      grid-area:2 / 2 / 4 / 4;
+      background-size:cover;
+    }
+    div:nth-child(5) {
+      background-color:gray;
+      grid-area: 3 / 1 / 4 / 2;
+      background-size:cover;
+      background-position:center;
+    }
+    div:nth-child(6) {
+      background-color:violet;
+      grid-area: 4 / 2 / 6 / 4;
+      background-size:cover;
+      background-position:center;
+    }
+    div:nth-child(7) {
+      background-color:violet;
+      grid-area: 4 / 1 / 6 / 3;
+      background-size:cover;
+      background-position:center;
+    }
 
   }
-  div:nth-child(6) {
-    background-color:violet;
-    grid-area: 3 / 2 / 4 / 3;
-  }
 
+  @media ${device.laptop} {
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:2fr 1fr 2fr 1fr;
+  }1
 `
 
 
 const StyledProjectGrid = styled.section`
-  display:none !important;
-  div {border:2px solid red;}
-
+  width:100%;
+  margin:40px auto;
   div {
     img {width:100%;}
   }
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  grid-template-rows:1fr;
-  // grid-template-rows:1fr 1fr 1fr;
-  // grid-auto-flow:row;
+
+  @media ${device.tablet} {
+    max-width:768px;
+  }
+  @media ${device.laptop} {
+    max-width:960px;
+  }
+
+  @media ${device.laptopL} {
+    max-width:1200px;
+  }
   
-  #project-title-location {
-    grid-row-start:3;
-    grid-row-end:4;
-    order:1;
-  }
-
-  #project-description {
-
-  }
+ 
 `

@@ -1,5 +1,6 @@
 import React from 'react'
 import L2PagesLayout from "../../components/l2-page-template"
+import bgImage from "../../images/BuildingAerial.jpg"
 
 
 const OurFirmIndex = () => (
@@ -7,6 +8,7 @@ const OurFirmIndex = () => (
     <L2PagesLayout 
       title = {`Our Firm`}
       subnav = {`firm`}
+      backgroundImage = {bgImage}
       content = {`
         <p>As a family-owned business, Wieser Brothers promotes these deeply-held values among our team.</p>
 

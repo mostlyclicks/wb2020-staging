@@ -1,11 +1,16 @@
 import React from 'react'
 import L2PagesLayout from "../../components/l2-page-template"
+import bgImage from "../../images/Framing-Construction.jpg"
+
+
 
 const Safety = () => (
   <>
     <L2PagesLayout 
       title={`Safety`}
       subnav={`firm`}
+      backgroundImage = {bgImage}
+      
       content={`
         <p>Safety is instilled within our core values and evident at every level of our organization. Wieser Brothers has an impeccable safety record within the construction profession, and our exemplary Experience Modification Rating (EMR) allows us to pass additional savings onto our clients.</p>
 

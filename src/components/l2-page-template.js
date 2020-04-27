@@ -8,9 +8,16 @@ import SideBarAddress from "./Subnavs/address-sidebar"
 const L2PagesLayout = props => (
   <Layout>
     <ContentWrapper>
+      <L2MainImage style={{
+        backgroundImage: 'url(' + props.backgroundImage + ')'
+      }}>
+      <L2Title>
+        <h1>{props.title}</h1>
+      </L2Title>
+      </L2MainImage>
       <Content>
         <MainContent>
-          <h1>{props.title}</h1>
+          
           <div dangerouslySetInnerHTML={{ __html: props.content }} />
         </MainContent>
 
@@ -60,7 +67,65 @@ padding:1.5rem;
 `
 
 const MainContent = styled.main`
-  
+  font-family:'Open Sans';
+  font-weight:400 !important;
+  margin-top:2.5rem;
+`
+
+const L2Title = styled.div`
+width:100%;
+  h1 {
+    display:inline-block;
+    margin-bottom:-30px;
+    margin-left:auto;
+    margin-right:auto;
+    color:#ffffff;
+    font-size:28px;
+    font-family:'IBM Plex Serif';
+    background-color:rgba(0,0,0,.7);
+    padding:2rem 3rem;
+    box-shadow:5px 5px 10px rgba(0,0,0,.2);
+    border-top:6px solid var(--orange);
+  }
+@media ${device.tablet} {
+  max-width:768px;
+  margin:0 auto;
+}
+@media ${device.laptop} {
+  max-width:960px;
+  margin:0 auto;
+}
+@media ${device.laptopL} {
+  max-width:1200px;
+  margin:0 auto;
+}
+
+`
+
+const L2MainImage = styled.div`
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-end;
+  height:300px;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  @media ${device.tablet} {
+    height:350px;
+  }
+  @media ${device.tablet} {
+    height:400px;
+    background-position-y:-120px;
+  }
+  @media ${device.laptop} {
+    height:550px;
+    background-position-y:-100px;
+  }
+  @media ${device.laptopL} {
+    height:700px;
+    background-position-y:-200px;
+  }
 `
 
 const L2Navigation = styled.aside`
@@ -82,6 +147,9 @@ const L2Navigation = styled.aside`
       text-decoration: none;
     }
     li a {
+      font-family:'Open Sans';
+      color:var(--wbGreenDark);
+      font-weight:400;
       display: block;
       padding: 1rem;
       text-decoration: none;
