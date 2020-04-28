@@ -40,42 +40,6 @@ background: radial-gradient(ellipse at center,  #00573c 0%,#003813 100%); /* W3C
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00573c', endColorstr='#003813',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   height: 100%;
 `
-const WeiserBrothersSection = styled.section`
-  
-  color:#bcbcbc;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding-top:40px;
-  padding-bottom:40px;
-  margin-bottom:0px;
-  img {
-    width:90%;
-    margin:0 auto;
-    align-items:center;
-  }
-  p {
-    padding:0 20px;
-    line-height:1.55rem;
-    font-family:'Open Sans';
-    font-weight:400;
-  }
-  
-  @media ${device.tablet} {
-    width:55%;
-    margin:80px auto;
-    height:550px;
-  }
-  @media ${device.laptop} {
-    width:670px;
-    p {
-    display:block;
-    width:560px;
-    padding-top:2rem;
-    margin:0px auto;
-    }
-  }
 
-`
 
   

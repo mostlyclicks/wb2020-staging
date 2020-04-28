@@ -10,9 +10,6 @@ const Projects = ( {data} ) => {
 
   const projects = data.prismic.allProjects.edges
 
-  
-
-
   return (
     <Layout>
     <ProjectWrapper>
@@ -47,6 +44,13 @@ export const query = graphql`
                    title
                    _meta {
                      uid
+                   }
+                   body {
+                     ... on PRISMIC_ProjectBodyImage {
+                       fields {
+                         image
+                       }
+                     }
                    }
                    
                  }

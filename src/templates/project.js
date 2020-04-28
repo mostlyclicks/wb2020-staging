@@ -19,17 +19,10 @@ export const query = graphql`
                    location
                    long_description
                    body {
-                     __typename
                      ... on PRISMIC_ProjectBodyImage {
                        fields {
                          image 
                          imageSharp {
-                           internal {
-                             content
-                             description
-                             ignoreType
-                             mediaType
-                           }
                            childImageSharp {
                              fluid(quality: 80) {
                                srcWebp
@@ -54,7 +47,7 @@ const Project = ({ data }) => {
   
   return (
     <Layout>
-      <h1>Projects</h1>
+      
        <StyledProjectGrid>
         {project.map(proj => {
 
@@ -62,7 +55,7 @@ const Project = ({ data }) => {
             <MainDiv>
               <div id="project-title-location" className="box">
                 <h1>{RichText.asText(proj.node.title)}</h1>
-                {/*proj.node._meta.uid*/}
+                
                 <h3>{proj.node.location}</h3>
               </div>
 
@@ -72,10 +65,6 @@ const Project = ({ data }) => {
 
               {proj.node.body.map(({ fields }) => {
 
-                // const bgImg = {
-                //   backgroundImage: 'url(" + {field.imageSharp.childImageSharp.fluid.srcWebp + ")'
-                // }
-                
                 return (
                   <>
                     {fields.map((field, index) => {
@@ -84,7 +73,7 @@ const Project = ({ data }) => {
                           style={{ 
                             backgroundImage: 'url(' + field.imageSharp.childImageSharp.fluid.srcWebp + ')'
                           }}>
-                          {/*<img src={field.imageSharp.childImageSharp.fluid.srcWebp}  alt={field.image.alt}/>*/}
+                          
                         </div>
                         )
                     })}            
@@ -96,10 +85,6 @@ const Project = ({ data }) => {
           )
         })}
       </StyledProjectGrid>
-
-       
-
-
     </Layout>
   )
 }
@@ -109,10 +94,21 @@ export default Project
 const MainDiv = styled.div`
   display:inline-grid;
   width:100%;
+  div:nth-child(1) {
+    color:var(--orange);
+    h1 {font-family:'IBM Plex Serif';}
+    h3 {
+      font-family:'Open Sans';
+      font-weight:400;
+    }
+  }
+  div:nth-child(2) {
+    // color:#ffffff;
+    font-family:'Open Sans';
+  }
   
   margin:0 auto;
   grid-gap:3px; 
-  
   
   div:nth-child(n+3) {
     height:350px;
@@ -126,57 +122,103 @@ const MainDiv = styled.div`
 
 
   @media ${device.tablet} {
+    
+    margin-top:40px;
+    margin-bottom:100px;
+    max-width:90%;
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows:2fr 1fr 2fr 4fr;
-    grid-gap:1rem;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height:100vh;
+    grid-gap:2rem;
       
     div:nth-child(n+3) {
       height:auto;
     }
 
+    //TITLE BOX
     div:nth-child(1) {
-      grid-area:1 / 3 / 2 / 4;
-      background-color:#efefef;
+      grid-area:3 / 4 / 5/ 6;   
+      background-color:var(--darkGray);
+      order:3;
+      box-shadow:10px 10px 25px rgba(0,0,0,.2);
+      height:50%;
+      margin-top:20%;
+
+      
     }
+    //DESCRIPTION TEXT
     div:nth-child(2) {
-      grid-area:2 / 1 / 3 / 2;
+      grid-area:4 / 1 / 5 / 4;
+      order:4;
+      // display:none;
     }
+    //MAIN PICTURE
     div:nth-child(3) {
-      grid-area:1 / 1 / 2 / 3;
+      grid-area:1 / 1 / 4 / 5;
       background-size:cover;
-      background-position:center;
+      box-shadow:5px 5px 15px rgba(0,0,0,.25);
+      
     }
     div:nth-child(4) {
       background-color:green;
-      grid-area:2 / 2 / 4 / 4;
+      grid-area:5 / 1 / 7 / 4;
       background-size:cover;
+      box-shadow:3px 3px 10px rgba(0,0,0,.3);
+      // display:none;
     }
     div:nth-child(5) {
       background-color:gray;
-      grid-area: 3 / 1 / 4 / 2;
+      grid-area: 5/ 4 / 6 / 6;
       background-size:cover;
       background-position:center;
+      box-shadow:3px 3px 10px rgba(0,0,0,.3);
+      // display:none;
     }
     div:nth-child(6) {
       background-color:violet;
-      grid-area: 4 / 2 / 6 / 4;
+      grid-area: 6 / 4 / 8 / 6;
       background-size:cover;
       background-position:center;
+      box-shadow:3px 3px 10px rgba(0,0,0,.3);
+      // display:none;
     }
     div:nth-child(7) {
       background-color:violet;
       grid-area: 4 / 1 / 6 / 3;
       background-size:cover;
       background-position:center;
+      display:none;
     }
 
   }
 
   @media ${device.laptop} {
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows:2fr 1fr 2fr 1fr;
-  }1
+    // border:1px solid blue;
+    max-width:960px;
+
+    //TITLE BOX
+    div:nth-child(1) {
+      grid-area:3 / 4 / 5 / 6;   
+            
+    }
+
+    div:nth-child(3) {
+      grid-area:1 / 1 / 4 / 5;
+      background-size:cover;
+      background-position:center;
+      
+      
+      // border:1px solid red;
+      // height:600px;
+    }
+
+
+  }
+
+  @media ${device.laptopL} {
+    max-width:1200px;
+  }
 `
 
 
@@ -188,10 +230,12 @@ const StyledProjectGrid = styled.section`
   }
 
   @media ${device.tablet} {
-    max-width:768px;
+    // max-width:768px;
+    max-width:100%;
+    margin-top:0px;
   }
   @media ${device.laptop} {
-    max-width:960px;
+    // max-width:960px;
   }
 
   @media ${device.laptopL} {
