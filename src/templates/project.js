@@ -95,6 +95,7 @@ const MainDiv = styled.div`
   display:inline-grid;
   width:100%;
   div:nth-child(1) {
+    border-top:6px solid var(--orange);
     margin:20px;
     color:var(--orange);
     background-color:var(--darkGray);
@@ -128,7 +129,7 @@ const MainDiv = styled.div`
     
     margin-top:40px;
     margin-bottom:100px;
-    max-width:90%;
+    max-width:100%;
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -198,7 +199,8 @@ const MainDiv = styled.div`
 
   @media ${device.laptop} {
     // border:1px solid blue;
-    max-width:960px;
+    // max-width:960px;
+    
 
     //TITLE BOX
     div:nth-child(1) {
@@ -220,7 +222,7 @@ const MainDiv = styled.div`
   }
 
   @media ${device.laptopL} {
-    max-width:1200px;
+    // max-width:1200px;
   }
 `
 
@@ -239,10 +241,13 @@ const StyledProjectGrid = styled.section`
   }
   @media ${device.laptop} {
     // max-width:960px;
+    max-width:90%;
+
   }
 
   @media ${device.laptopL} {
-    max-width:1200px;
+    // max-width:1200px;
+    max-width:80%;
   }
   
  
