@@ -28,16 +28,17 @@ const HomeGrid = () => {
         </GridItem>
         <GridItem>
           <GridBox>
-            <h1>News</h1>
-            <p>New ABC Company Expansions</p>
-            <Link to="/">Read more</Link>
+            <h1>News &amp; Events</h1>
+            
+            <Link to="/news-events">Read more</Link>
           </GridBox>
         </GridItem>
         <GridItem></GridItem>
         <GridItem></GridItem>
         <GridItem>
           <GridBox>
-            <h1>Employment Opportunities</h1>
+            <h1>Careers</h1>
+            <h3>Constructing your career path?  Join Wieser Brothers Crew</h3>
             <p>See all of our job opportunities</p>
             <Link to="/">Start here</Link>
           </GridBox>
@@ -174,12 +175,17 @@ const GridItem = styled.div`
 const GridBox = styled.div`
   width: 250px;
   height: 250px;
-  overflow: hidden;
+  // overflow: hidden;
   h1 {
     font-size: 36px;
     line-height: 2.45rem;
     margin-top: 1rem;
     font-family: "IBM Plex Serif";
+  }
+  p {
+    font-family:"Open Sans";
+    font-weight:400;
+    margin-bottom:2rem;
   }
   a {
     color: #fff;
