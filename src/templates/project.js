@@ -107,25 +107,29 @@ const MainDiv = styled.div`
     }
   }
   div:nth-child(2) {
-    // color:#ffffff;
+    p {margin-top:0;}
     font-family:'Open Sans';
+    font-size:14pt;
   
   }
 
-  div:nth-child(n + 8) {display:none;}
+  div:nth-child(n + 6) {display:none;}
   
   margin:0 auto;
   grid-gap:3px; 
   
   div:nth-child(n+3) {
-    height:350px;
+    height:400px;
     background-position:center;
     background-repeat:no-repeat;
+    margin:10px 20px;
   }
   
   .box {
     padding:1rem;
   }
+
+  
 
 
   @media ${device.tablet} {
@@ -145,6 +149,7 @@ const MainDiv = styled.div`
       
     div:nth-child(n+3) {
       height:auto;
+      
     }
 
     //TITLE BOX
@@ -217,6 +222,13 @@ const MainDiv = styled.div`
     div:nth-child(1) {
       grid-area:2 / 4 / 3 / 6;   
             
+    }
+
+    //DESCRIPTION TEXT
+    div:nth-child(2) {
+      column-count:2;
+      
+      
     }
 
     div:nth-child(3) {

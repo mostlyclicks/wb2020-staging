@@ -52,6 +52,7 @@ export default Header
 const HeaderWrapper = styled.section`
   width:100%;
   background-color:#00573c;
+  
   margin:0 auto;
   
 
