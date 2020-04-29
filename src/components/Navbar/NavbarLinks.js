@@ -30,6 +30,10 @@ const NavItem = styled(Link)`
  transition: all 200ms ease-in;
  position:relative;
 
+ a {
+   text-shadow:0px 0px 10px rgba(0,0,0,.5);
+ }
+
  :after {
    position: absolute;
    bottom:0;

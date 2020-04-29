@@ -49,7 +49,8 @@ import { device } from "../media-queries"
   font-weight:400;
   height:80px;
   display:flex;
-  background-color: rgba(0,87,60,.8);//#00573c
+  background-color: rgba(0,87,60,0);//#00573c
+  // background-color:r;
   position:relative;
   justify-content:space-between;
   text-transform:uppercase;
@@ -113,6 +114,7 @@ import { device } from "../media-queries"
       width:80%;
       border-bottom:1px solid #cdcdcd;
       padding:1rem 20px;
+      
       
     }
 

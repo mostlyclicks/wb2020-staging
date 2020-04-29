@@ -51,7 +51,9 @@ export default Header
 
 const HeaderWrapper = styled.section`
   width:100%;
-  background-color:#00573c;
+  // background-color:#00573c;
+  background-color:var(--darkGray);
+  border-top:5px solid var(--wbGreenDark);
   
   margin:0 auto;
   
