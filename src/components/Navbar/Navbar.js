@@ -21,14 +21,12 @@ import { device } from "../media-queries"
     return (
       <Navigation>
         <Logo />
-        
         <Toggle
           navbarOpen={navbarOpen}
           onClick={() => setNavbarOpen(!navbarOpen)}
         >
           {navbarOpen ? <Hamburger open /> : <Hamburger />}
         </Toggle>
-
         {navbarOpen ? (
           <Navbox>
             <NavbarLinks menuLinks={menuLinks} />
